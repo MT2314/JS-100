@@ -12,10 +12,13 @@ function play(e) {
   if (e.target.tagName == "BUTTON") {
     let result = startGame(e.target.id, computer);
     playerChoice.textContent = `You Chose ${e.target.id}`;
-    console.log(result);
     score.textContent = `${result.toUpperCase()}`;
+    score.style.color = chooseColor(result);
     computerChoice.textContent = `Computer Chose ${computer}`;
   }
+}
+function chooseColor(result) {
+  return result === "Tie" ? "yellow" : result === "Win" ? "green" : "red";
 }
 
 const startGame = (player, computer) => {

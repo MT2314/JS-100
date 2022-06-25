@@ -9,6 +9,11 @@ html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  color: white;
+}
+
+#score {
+  color: yellow;
 }
 
 .game-container {
